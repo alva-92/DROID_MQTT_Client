@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements MqttCallback {
             String topic = "topic/DroidSample";
             client.subscribe(topic);
 
-            MqttMessage message = new MqttMessage("AliveDroid".getBytes());
+            MqttMessage message = new MqttMessage("Android Active".getBytes());
             try {
                 client.publish("topic/OnlyDroid", message);
             } catch (MqttException e) {
